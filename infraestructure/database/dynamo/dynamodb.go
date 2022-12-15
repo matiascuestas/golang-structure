@@ -13,13 +13,13 @@ type dynamoDB struct {
 var ReadByIdMock func(id int) database.IAuditable
 
 func (s dynamoDB) ReadAll() []database.IAuditable {
-	fmt.Println(fmt.Sprintf("Readall"))
+	fmt.Println("Readall")
 	var collection []database.IAuditable
 	return collection
 }
 
 func (s dynamoDB) ReadById(id int) database.IAuditable {
-	fmt.Println(fmt.Sprintf("id to get: %v", id))
+	fmt.Printf("id to get: %v \n", id)
 	return ReadByIdMock(id)
 }
 
